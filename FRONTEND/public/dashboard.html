@@ -1,34 +1,75 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dashboard</title>
+    <title>Dashboard | Crypto Exchange</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
-<body>
-    <header>
-        <nav>
-            <ul>
-                <li><a href="index.html">Inicio</a></li>
-                <li><a href="balance.html">Ver saldo</a></li>
-                <li><a href="transfer.html">Realizar transferencia</a></li>
-                <li><a href="logout.html">Cerrar sesión</a></li>
-            </ul>
-        </nav>
-    </header>
 
-    <main>
-        <section class="dashboard">
-            <h2>Bienvenido, [nombre de usuario]</h2>
-            <p>Tu saldo actual es: [Saldo]</p>
-            <a href="transfer.html" class="btn">Realizar transferencia</a>
-            <a href="balance.html" class="btn">Ver saldo completo</a>
-        </section>
-    </main>
+<body style="font-family: 'Roboto', sans-serif; background-color: #121212; color: #fff;">
 
-    <footer>
-        <p>&copy; 2024 Crypto Exchange. Todos los derechos reservados.</p>
-    </footer>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="index.html" style="font-weight: bold; color: #f1c40f;">Crypto Exchange</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link text-light" href="#">Dashboard</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-light" href="#">Perfil</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-light" href="#">Cerrar sesión</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Sección del Dashboard -->
+    <div class="container py-5">
+        <h2 class="text-warning mb-4">Bienvenido, Usuario</h2>
+
+        <!-- Panel de Información -->
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card shadow-lg text-center" style="border-radius: 15px;">
+                    <div class="card-body">
+                        <h5 class="card-title">Saldo de Criptomonedas</h5>
+                        <p class="display-4">0.00 BTC</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card shadow-lg text-center" style="border-radius: 15px;">
+                    <div class="card-body">
+                        <h5 class="card-title">Última Transacción</h5>
+                        <p class="text-success">+ 0.5 BTC</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card shadow-lg text-center" style="border-radius: 15px;">
+                    <div class="card-body">
+                        <h5 class="card-title">Historial de Transferencias</h5>
+                        <a href="#" class="btn btn-warning">Ver historial</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
+
 </html>

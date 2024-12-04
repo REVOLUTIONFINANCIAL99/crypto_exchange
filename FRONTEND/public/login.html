@@ -1,39 +1,50 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Iniciar sesión</title>
+    <title>Iniciar Sesión | Crypto Exchange</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/style.css">
+
 </head>
-<body>
-    <header>
-        <nav>
-            <ul>
-                <li><a href="index.html">Inicio</a></li>
-                <li><a href="about.html">Acerca de</a></li>
-            </ul>
-        </nav>
-    </header>
 
-    <main>
-        <section class="login-form">
-            <h2>Iniciar sesión</h2>
-            <form action="/api/login" method="POST">
-                <label for="username">Nombre de usuario</label>
-                <input type="text" id="username" name="username" required>
+<body style="font-family: 'Roboto', sans-serif; background-color: #121212; color: #fff;">
 
-                <label for="password">Contraseña</label>
-                <input type="password" id="password" name="password" required>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="index.html" style="font-weight: bold; color: #f1c40f;">Crypto Exchange</a>
+        </div>
+    </nav>
 
-                <button type="submit" class="btn">Entrar</button>
-            </form>
-            <p>Aún no tienes cuenta? <a href="register.html">Regístrate</a></p>
-        </section>
-    </main>
+    <!-- Formulario de Login -->
+    <div class="container d-flex justify-content-center align-items-center vh-100">
+        <div class="card shadow-lg" style="width: 100%; max-width: 400px; border-radius: 15px;">
+            <div class="card-body">
+                <h3 class="text-center text-warning mb-4">Iniciar sesión</h3>
+                <form action="/login" method="POST">
+                    <div class="mb-3">
+                        <label for="username" class="form-label">Nombre de usuario</label>
+                        <input type="text" class="form-control" id="username" name="username" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="password" class="form-label">Contraseña</label>
+                        <input type="password" class="form-control" id="password" name="password" required>
+                    </div>
+                    <button type="submit" class="btn btn-warning w-100">Iniciar sesión</button>
+                </form>
+                <div class="text-center mt-3">
+                    <a href="register.html" class="text-light">¿No tienes cuenta? Regístrate aquí</a>
+                </div>
+            </div>
+        </div>
+    </div>
 
-    <footer>
-        <p>&copy; 2024 Crypto Exchange. Todos los derechos reservados.</p>
-    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
+
 </html>
