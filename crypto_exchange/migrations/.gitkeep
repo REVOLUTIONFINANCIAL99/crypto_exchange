@@ -1,0 +1,6 @@
+// filepath: /crypto_exchange/migrations/2_deploy_token.js
+const Token = artifacts.require("Token");
+
+module.exports = function (deployer) {
+    deployer.deploy(Token, 1000000); // Inicializa con 1,000,000 tokens
+};
